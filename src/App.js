@@ -81,7 +81,7 @@ class App extends Component {
       const listItems = items.map((item,index) => {
         return (
           <div key={"parentDiv"+index}>
-            <h3 key={index}>{item.title || item.story_title}</h3>
+            <h3 className="rowTitle"key={index}>{item.title || item.story_title}</h3>
             <div key={"div"+index} className="flex-list">
               <ul key={"uL"+index}>
                 <li key={"points"+index}>{item.points} points(s)</li>|
@@ -90,6 +90,7 @@ class App extends Component {
                 <li key={"url"+index}><a>{item.url}</a></li>
               </ul>
             </div>
+            <hr></hr>
           </div>
         );
       });
